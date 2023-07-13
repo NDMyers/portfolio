@@ -4,11 +4,6 @@ import { motion } from 'framer-motion'
 import PageOne from './components/PageOne'
 import NavBar from './components/NavBar'
 import MobileQuickView from "./components/MobileQuickView"
-import { timeStamp } from "console"
-
-// const hiddenMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 30px, rgba(0,0,0,1) 30px, rgba(0,0,0,1) 30px)`;
-// const visibleMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 0px, rgba(0,0,0,1) 0px, rgba(0,0,0,1) 30px)`;
-
 
 interface pageProps {
 
@@ -18,7 +13,7 @@ const useIntro = () => {
   const storage = window.localStorage
   const currTimestamp = Date.now()
   const timeStamp = JSON.parse(storage.getItem('timestamp') || '1000')
-  const timeLimit = 3 * 1000 // 3 hours
+  const timeLimit = 3 * 60 * 1000 // 3 hours
   const hasTimePassed = currTimestamp - timeStamp > timeLimit
 
   useEffect(() => {
@@ -88,11 +83,6 @@ const Page:FC<pageProps> = ({}) => {
   // const mousemoveHandler = () => {
   //   let mousePos = { x: event.clientX, y: event.clientY}
   // }
-
-  useEffect(() => {
-    // alert(showAnimation)
-  })  
-
 
   return (
     <main>
