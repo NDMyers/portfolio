@@ -13,13 +13,25 @@
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
     "autoprefixer": "10.4.14",
+    "circular-revealer": "^0.0.9",
     "eslint": "8.44.0",
     "eslint-config-next": "13.4.9",
+    "framer-motion": "^10.12.18",
+    "gsap": "^3.12.2",
+    "lucide-react": "^0.258.0",
     "next": "13.4.9",
     "postcss": "8.4.25",
     "react": "18.2.0",
+    "react-beforeunload": "^2.6.0",
+    "react-circular-reveal": "^1.2.2",
     "react-dom": "18.2.0",
+    "react-scroll": "^1.8.9",
+    "react-scroll-parallax": "^3.4.2",
     "tailwindcss": "3.3.2",
-    "typescript": "5.1.6"
+    "typescript": "5.1.6",
+    "typewriter-effect": "^2.20.1"
+  },
+  "devDependencies": {
+    "@types/react-scroll": "^1.8.7"
   }
 }
