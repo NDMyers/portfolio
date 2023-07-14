@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import PageOne from './components/PageOne'
 import NavBar from './components/NavBar'
 import MobileQuickView from "./components/MobileQuickView"
+import MobileNavMenu from "./components/MobileNavMenu"
 
 interface pageProps {
 
@@ -26,7 +27,7 @@ const useIntro = () => {
   return hasTimePassed
 }
 
-const Page:FC<pageProps> = ({}) => {
+const Page:FC<pageProps> = ({ }) => {
 
   const [isDoneLoading, setIsDoneLoading] = useState(false)
   const showAnimation = useIntro()
@@ -94,7 +95,8 @@ const Page:FC<pageProps> = ({}) => {
             duration: 0.7,
           }}
         >
-          <NavBar />
+          <MobileNavMenu />
+          <NavBar pageName="Home"/>
           <PageOne />
         </motion.div>
       )}

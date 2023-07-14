@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import { motion } from 'framer-motion'
 import { LucideArrowUpRight } from 'lucide-react'
+import Link from 'next/link'
 
 interface ProjectDivProps {
     title: string
@@ -9,6 +10,7 @@ interface ProjectDivProps {
 
 const ProjectDiv: FC<ProjectDivProps> = ({ title, description }) => {
     return (
+        <Link href='https://www.google.com' >
         <motion.div className='flex flex-col w-auto group p-3 rounded-lg'
             whileHover={{
                 scale: 1.1,
@@ -23,6 +25,7 @@ const ProjectDiv: FC<ProjectDivProps> = ({ title, description }) => {
             </div>
             <div className='flex text-slate-300 max-w-[20rem] xl:text-md text-sm text-left tracking-tighter leading-tight xl:pt-2 pt-0'>{description}</div>
         </motion.div>
+        </Link>
     )
 }
 
