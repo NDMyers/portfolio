@@ -22,9 +22,9 @@ const DetailedProjectsDiv: FC<DetailedProjectsDivProps> = ({ title, description,
     }
 
     return (
-        <motion.div className='flex flex-col w-auto group p-3 rounded-lg'
+        <motion.div className='flex flex-col w-auto h-40 group p-3 rounded-lg'
             whileHover={{
-                scale: 1.1,
+                scale: 1.04,
                 cursor: "pointer",
                 borderRadius: "0.5rem",
                 backgroundColor: "rgb(30, 41, 59)"
