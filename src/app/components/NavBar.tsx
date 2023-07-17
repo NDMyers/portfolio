@@ -52,7 +52,7 @@ const NavBar: FC<NavBarProps> = ({ pageName }) => {
 
     return (
         <div>
-            <motion.div className='hidden sm:flex flex-row fixed items-center w-full h-20 px-4 justify-evenly bg-slate-900 border-emerald-700 outline-dashed'
+            <motion.div className='z-20 hidden sm:flex flex-row fixed items-center w-full h-16 pt-1 justify-evenly bg-slate-900 border-emerald-700'
                 // initial={{ opacity: 0 }}
                 animate={ visible ? 'showingNav' : 'hidingNav' }
                 variants={itemVariants}
@@ -61,13 +61,13 @@ const NavBar: FC<NavBarProps> = ({ pageName }) => {
                     ease: 'easeInOut'
                 }}
                 >
-                <div className='w-full h-full z-0 absolute'>
+                {/* <div className='w-full h-full z-0 absolute'>
                     <ParticlesComponent />
-                </div>
-                <div className='flex flex-row w-full h-20 px-4 py-1 justify-evenly fixed z-10'>
+                </div> */}
+                <div className='flex flex-row w-full h-20 px-4 justify-evenly fixed z-10'>
                     <NavBarItem title='Resume' isResume={true} isVisible={visible}/>
                     <NavBarItem title={ pathname === '/projects' ? 'Home' : 'Projects' } isResume={false} isVisible={visible}/>
-                    <NavBarItem title={ pathname === '/about' ? 'Home' : 'About' } isResume={false} isVisible={visible}/>
+                    <NavBarItem title={ pathname === '/about' ? 'Home' : 'Education' } isResume={false} isVisible={visible}/>
                     <NavBarItem title='Contact Me' isResume={false} isVisible={visible}/>
                 </div>
             </motion.div> 

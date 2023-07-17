@@ -54,7 +54,7 @@ const Quickview: FC<QuickviewProps> = ({}) => {
         </div>
 
         {showProjects &&
-        <div className='hidden sm:flex flex-row justify-evenly items-center h-3/4 w-3/4 flex-wrap overflow-y-auto overflow-x-hidden'>
+        <div className='hidden sm:flex flex-row justify-evenly items-center h-3/4 w-full flex-wrap overflow-y-auto overflow-x-hidden'>
             <ProjectDiv title='TikTok Tournaments' description='An interactive web app where users can enter TikTok URLs to compete in a popularity tournament bracket, example tournament included!' />
             <ProjectDiv title='Picklepals' description='Real time chatting web app featuring friend requests and chatting that utilizes google login for authentication'/>
             <ProjectDiv title='My TCP Tahoe/Reno' description='A Pythonic recreation of industry standard TCP networking protocols using client-server interactions, self-made congestion control, sockets, and data packet formatting' />
@@ -63,10 +63,10 @@ const Quickview: FC<QuickviewProps> = ({}) => {
         </div> }
 
         {!showProjects &&
-        <div className='hidden sm:flex flex-col justify-evenly items-start h-3/4 w-3/4 flex-wrap overflow-y-auto overflow-x-hidden max-w-3xl'>
+        <div className='hidden sm:flex flex-col justify-evenly items-center h-3/4 w-3/4 flex-wrap overflow-y-auto overflow-x-hidden max-w-3xl'>
             <div className='flex flex-col flex-wrap'>
-                <p className='text-violet-400 font-bold text-5xl pb-4 text-center'>Languages</p>
-                <div className='flex flex-row flex-wrap justify-center bg-slate-800 rounded-xl p-4'>
+                <p className='text-violet-400 font-bold text-4xl pb-4 text-center'>Languages</p>
+                <div className='flex flex-row flex-wrap justify-center bg-slate-800 rounded-xl p-2'>
                     <SkillsDiv title='C++' description='' />
                     <SkillsDiv title='Python' description=''/>
                     <SkillsDiv title='JavaScript' description='' />
@@ -78,8 +78,8 @@ const Quickview: FC<QuickviewProps> = ({}) => {
                 </div>
             </div>
             <div className='flex flex-col'>
-                <p className='text-violet-400 font-bold text-5xl pb-4 text-center'>Frameworks / Databases</p>
-                <div className='flex flex-row flex-wrap justify-center bg-slate-800 rounded-xl p-4'>
+                <p className='text-violet-400 font-bold text-4xl pb-4 text-center'>Frameworks / Databases</p>
+                <div className='flex flex-row flex-wrap justify-center bg-slate-800 rounded-xl p-2'>
                     <SkillsDiv title='React' description='' />
                     <SkillsDiv title='Next.js' description=''/>
                     <SkillsDiv title='Node.js' description='' />
@@ -90,8 +90,8 @@ const Quickview: FC<QuickviewProps> = ({}) => {
                 </div>
             </div>
             <div className='flex flex-col'>
-                <p className='text-violet-400 font-bold text-5xl pb-4 text-center'>Developer Tools</p>
-                <div className='flex flex-row flex-wrap justify-center bg-slate-800 rounded-xl p-4'>
+                <p className='text-violet-400 font-bold text-4xl pb-4 text-center'>Developer Tools</p>
+                <div className='flex flex-row flex-wrap justify-center bg-slate-800 rounded-xl p-2'>
                     <SkillsDiv title='Git' description='' />
                     <SkillsDiv title='VS Code' description=''/>
                     <SkillsDiv title='GitHub' description='' />
@@ -102,12 +102,12 @@ const Quickview: FC<QuickviewProps> = ({}) => {
             </div>
         </div> }
 
-        <div className='w-[80%] h-[2px] mt-10  bg-emerald-700'>
+        {/* <div className='w-[80%] h-[2px] mt-10  bg-emerald-700'>
             <div className='hidden sm:flex py-8 justify-between'>
                 <p className='text-slate-600 text-sm'>Coded using Next.js and TailwindCSS, deployed on Vercel</p>
                 <p className='text-slate-600 text-sm'>© 2023 Nick Myers</p>
             </div>
-        </div>
+        </div> */}
 
     </div>
 

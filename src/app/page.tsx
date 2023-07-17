@@ -8,6 +8,7 @@ import MobileNavMenu from "./components/MobileNavMenu"
 import Quickview from "./components/Quickview"
 import AnimatedCursor from 'react-animated-cursor'
 import ParticlesComponent from "./components/ParticlesComponent"
+import PageTwo from "./components/PageTwo"
 
 
 interface pageProps {
@@ -54,7 +55,7 @@ const Page = ({ }) => {
 
   const LoadingContainer = {
     width: "30%",
-    height: "100vh",
+    height: "80vh",
     display: "flex",
     justifyContent: "space-around",
   };
@@ -116,6 +117,7 @@ const Page = ({ }) => {
           <PageOne />
           <MobileQuickView />
           <Quickview />
+          <PageTwo />
         </motion.div>
       )}
       

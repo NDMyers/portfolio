@@ -17,8 +17,9 @@ interface PageOneProps {
 
 const PageOne: FC<PageOneProps> = ({ }) => {
 
+
     return (
-        <motion.div className='w-full h-screen overflow-x-hidden outline-dashed'
+        <motion.div className='w-full overflow-hidden bg-slate-900'
             // initial={{ opacity: 0 }}
             // animate={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -26,9 +27,18 @@ const PageOne: FC<PageOneProps> = ({ }) => {
                 ease:"easeIn",
                 duration: 0.8,
             }}>
+            {/* <div className='flex w-screen h-screen absolute justify-center'>
+                <ParticlesComponent />
+            </div> */}
             <NavBar pageName='Home' />
-            <div className='flex flex-col w-full h-screen justify-center px-6'>
-                <div className='flex flex-col justify-start items-center flex-1 pt-24'>
+            {/* <div className='flex justify-center items-center w-full h-1/2 z-0 absolute outline-dashed'>
+                <ParticlesComponent />
+            </div> */}
+            <div className='flex flex-col w-full justify-center px-6 relative'>
+                <div className='flex w-screen h-screen absolute z-0 justify-center'>
+                    <ParticlesComponent />
+                </div>
+                <div className='flex flex-col justify-start items-center flex-1 pt-24 z-10'>
                     <div className='mb-4 w-40 h-40 mr-2'>
                         <Image src='/headshot.jpg' alt='Photo of Nick Myers' className='rounded-full' width={2000} height={2000}/>
                     </div>
@@ -73,14 +83,14 @@ const PageOne: FC<PageOneProps> = ({ }) => {
                     </div>
 
 
-                    <div className='hidden sm:flex lg:pt-10 pt-5 max-w-lg'>
+                    {/* <div className='hidden sm:flex lg:pt-10 pt-5 max-w-lg'>
                         <p className='text-slate-300 xl:text-xl text-lg text-center tracking-tighter'>In a hurry? 
                             <Scroll.Link className='hover:cursor-pointer' to='qview' activeClass='active' duration={500} offset={50} spy={true} smooth={true}>
                                 <span className='text-emerald-700 font-bold'> Click here or scroll down </span>
                             </Scroll.Link>
                              to get a quick overview of my projects and skills.
                         </p>
-                    </div>
+                    </div> */}
 
                     {/* <div className='w-full h-[2px] mt-4 sm:mt-6  bg-emerald-700'>
                         <div className='hidden sm:flex py-8'>
@@ -103,7 +113,6 @@ const PageOne: FC<PageOneProps> = ({ }) => {
                     </div>
                 </div>
             </div>
-
         </motion.div>
 
         // <div className='w-full h-screen'>

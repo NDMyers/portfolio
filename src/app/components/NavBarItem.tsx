@@ -19,7 +19,7 @@ const NavBarItem: FC<NavBarItemProps> = ({ title, isResume, isVisible }) => {
     return (
         
         <Link href={ isResume ? `https://drive.google.com/file/d/1qq0Ugv_BOCqdK1ZLcVStps-aI0Zxis03/view?usp=sharing` : `/${title.toLowerCase()}`}
-            className='w-[20%] h-[80%] group'>
+            className='w-[20%] h-[80%] group mt-2'>
             <motion.div className='flex justify-center items-center w-full h-full text-white group'
                 whileHover={ isVisible ? {
                     scale: 1.1,

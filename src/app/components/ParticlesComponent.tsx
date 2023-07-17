@@ -39,23 +39,28 @@ const ParticlesComponent: FC<ParticlesComponentProps> = ({ }) => {
                 fpsLimit: 120,
                 interactivity: {
                     events: {
-                        onClick: {
-                            enable: true,
-                            mode: "push",
-                        },
                         onHover: {
                             enable: true,
-                            mode: "repulse",
+                            mode: "bubble",
                         },
                         resize: true,
                     },
                     modes: {
-                        push: {
-                            quantity: 4,
+                        bubble: {
+                            distance: 100,
+                            duration: 2,
+                            opacity: 3, 
+                            size: 5,
+                            speed: 5,
                         },
-                        repulse: {
-                            distance: 200,
-                            duration: 0.4,
+                        grab: {
+                            distance: 400,
+                            lineLinked: {
+                                opacity: 4
+                            }
+                        },
+                        connect: {
+                            distance: 400,
                         },
                     },
                 },
@@ -63,16 +68,24 @@ const ParticlesComponent: FC<ParticlesComponentProps> = ({ }) => {
                     enable: false,
                     zIndex: 0
                 },
+                smooth: true,
                 particles: {
                     color: {
-                        value: "#ffffff",
+                        value: "rgb(52, 211, 153)",
                     },
                     links: {
                         color: "#ffffff",
                         distance: 150,
                         enable: true,
-                        opacity: 0.5,
-                        width: 1,
+                        opacity: 0.1,
+                        width: 0.9,
+                    },
+                    lineLinked: {
+                        enable: false,
+                        distance: 150,
+                        color: "#c8c8c8",
+                        opacity: 0.4,
+                        width: 1
                     },
                     move: {
                         direction: "none",
@@ -81,18 +94,18 @@ const ParticlesComponent: FC<ParticlesComponentProps> = ({ }) => {
                             default: "bounce",
                         },
                         random: false,
-                        speed: 6,
+                        speed: 1.5,
                         straight: false,
                     },
                     number: {
                         density: {
                             enable: true,
-                            area: 800,
+                            area: 600,
                         },
                         value: 80,
                     },
                     opacity: {
-                        value: 0.5,
+                        value: 0.1,
                     },
                     shape: {
                         type: "circle",
