@@ -24,7 +24,7 @@ const MobileNavItem: FC<MobileNavItemProps> = ({ itemVariants, title }) => {
             setIsUnclickable(true)
         if( pathname === '/' && isHomeNavButton )
             setIsUnclickable(true)
-    },)
+    },[title, pathname, isHomeNavButton])
 
     return (
         <Link href={ isHomeNavButton ? '/' : ( isResumeNavButton ? 'https://drive.google.com/file/d/1qq0Ugv_BOCqdK1ZLcVStps-aI0Zxis03/view?usp=sharing' : `/${title.toLowerCase()}` ) }>

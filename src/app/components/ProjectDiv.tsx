@@ -22,7 +22,7 @@ const ProjectDiv: FC<ProjectDivProps> = ({ title, madeWith, description, imageSr
         if( demoURL === '' ) {
             setHasDemo(false)
         }
-    })
+    }, [demoURL])
 
     return (
         // <Link href='https://www.google.com' className='w-[70%] flex flex-col group rounded-lg border-slate-800' >
