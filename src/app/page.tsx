@@ -16,20 +16,24 @@ interface pageProps {
 }
 
 const useIntro = () => {
-  const storage = window.localStorage
-  const currTimestamp = Date.now()
-  const timeStamp = JSON.parse(storage.getItem('timestamp') || '1000')
-  const timeLimit = 3 * 60 * 1000 // 3 hours
-  const hasTimePassed = currTimestamp - timeStamp > timeLimit
+  if( typeof window !== 'undefined' ) {
+    const storage = window.localStorage
+    const currTimestamp = Date.now()
+    const timeStamp = JSON.parse(storage.getItem('timestamp') || '1000')
+    const timeLimit = 3 * 60 * 1000 // 3 hours
+    const hasTimePassed = currTimestamp - timeStamp > timeLimit
 
-  useEffect(() => {
-    hasTimePassed ? 
-      storage.setItem('timestamp', currTimestamp.toString())
-      :
-      storage.setItem('timestamp', timeStamp.toString())
-  }, [currTimestamp, hasTimePassed, storage, timeStamp])
+    useEffect(() => {
+      hasTimePassed ? 
+        storage.setItem('timestamp', currTimestamp.toString())
+        :
+        storage.setItem('timestamp', timeStamp.toString())
+    }, [currTimestamp, hasTimePassed, storage, timeStamp])
 
-  return hasTimePassed
+    return hasTimePassed
+  } else {
+    
+  }
 }
 
 const Page = ({ }) => {
@@ -86,24 +90,8 @@ const Page = ({ }) => {
     ease: "easeInOut",
   };
 
-  // const mousemoveHandler = () => {
-  //   let mousePos = { x: event.clientX, y: event.clientY}
-  // }
-
-
-
   return (
     <main>
-      {/* <AnimatedCursor 
-        showSystemCursor={true} 
-        outerStyle={{ display: "none" }}
-        innerSize={100}         
-        innerStyle={{ 
-          backgroundColor: 'rgba(15, 23, 42, 0.0)',
-          backgroundImage: 'radial-gradient(rgba(30, 41, 59, 0.1), rgba(15, 23, 42 0.1), transparent 100%)',
-          
-         }}
-      /> */}
 
       {isDoneLoading && (
         <motion.div className='bg-slate-00'

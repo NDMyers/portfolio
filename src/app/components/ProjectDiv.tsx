@@ -25,22 +25,6 @@ const ProjectDiv: FC<ProjectDivProps> = ({ title, madeWith, description, imageSr
     }, [demoURL])
 
     return (
-        // <Link href='https://www.google.com' className='w-[70%] flex flex-col group rounded-lg border-slate-800' >
-        //     <motion.div className='p-4'
-        //         whileHover={{
-        //             scale: 1.04,
-        //             cursor: "pointer",
-        //             borderRadius: "0.5rem",
-        //             backgroundColor: "rgb(30, 41, 59)"
-        //         }}
-        //     >
-        //         <div className='flex flex-row justify-between items-center p-2'>
-        //             <p className='flex text-slate-100 font-bold text-xl sm:text-2xl 2xl:text-4xl group-hover:text-emerald-700 hover:cursor-pointer'>{title}</p>
-        //             <LucideArrowUpRight className='text-white group-hover:text-emerald-700' />
-        //         </div>
-        //         <div className='flex text-slate-400 text-md sm:text-xl 2xl:text-2xl text-left tracking-tighter leading-tight xl:pt-2 pt-0 p-2'>{description}</div>
-        //     </motion.div>
-        // </Link>
 
         <motion.div
             className='w-[420px] h-[950px] sm:w-[700px] sm:h-[950px] lg:w-[700px] lg:h-[700px] rounded-xl bg-slate-800 flex flex-col flex-wrap justify-normal items-center m-8'
