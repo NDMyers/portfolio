@@ -11,18 +11,19 @@ interface ProjectDivProps {
     imageSrc: string
     demoURL: string
     codeURL: string
+    hasDemo: boolean
 }
 
-const ProjectDiv: FC<ProjectDivProps> = ({ title, madeWith, description, imageSrc, demoURL, codeURL }) => {
+const ProjectDiv: FC<ProjectDivProps> = ({ title, madeWith, description, imageSrc, demoURL, codeURL, hasDemo }) => {
 
-    const [hasDemo, setHasDemo] = useState<Boolean>(true)
-    const [hasCode, setHasCode] = useState<Boolean>(true)
+    // const [hasDemo, setHasDemo] = useState<Boolean>(true)
+    // const [hasCode, setHasCode] = useState<Boolean>(true)
 
-    useEffect(() => {
-        if( demoURL === '' ) {
-            setHasDemo(false)
-        }
-    }, [demoURL])
+    // useEffect(() => {
+    //     if( demoURL === '' ) {
+    //         setHasDemo(false)
+    //     }
+    // }, [demoURL])
 
     return (
 

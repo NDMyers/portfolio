@@ -117,7 +117,7 @@ const Page = ({ }) => {
           }}
         >
           {/* <MobileNavMenu /> */}
-          {/* <NavBar pageName="Home"/> */}
+          <NavBar pageName="Home"/>
           <PageOne />
           <MobileQuickView />
           <Quickview />

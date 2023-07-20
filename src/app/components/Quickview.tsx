@@ -72,6 +72,7 @@ const Quickview: FC<QuickviewProps> = ({}) => {
                         imageSrc='/tt.png'
                         demoURL='https://tiktoktourneys.vercel.app'
                         codeURL='https://github.com/NDMyers/TikTok-Tournaments'
+                        hasDemo={true}
                     />
                     <ProjectDiv 
                         title='Picklepals' 
@@ -80,6 +81,7 @@ const Quickview: FC<QuickviewProps> = ({}) => {
                         imageSrc='/picklepals.png'
                         demoURL='https://picklepals.vercel.app'
                         codeURL='https://github.com/NDMyers/picklepals'
+                        hasDemo={true}
                     />
                     <ProjectDiv 
                         title='My TCP Tahoe/Reno' 
@@ -88,6 +90,7 @@ const Quickview: FC<QuickviewProps> = ({}) => {
                         imageSrc='/renoAlice.png'
                         demoURL=''
                         codeURL='https://github.com/NDMyers/Coding-Projects/tree/main/TCP-Project'
+                        hasDemo={false}
                     />
                     <ProjectDiv 
                         title='User Dictionary' 
@@ -96,6 +99,7 @@ const Quickview: FC<QuickviewProps> = ({}) => {
                         imageSrc='/dict.png'
                         demoURL=''
                         codeURL='https://github.com/NDMyers/Coding-Projects/tree/main/User-Dictionary-App'
+                        hasDemo={false}
                     />
                     <ProjectDiv 
                         title='Audio Equalizer Plugin' 
@@ -104,6 +108,7 @@ const Quickview: FC<QuickviewProps> = ({}) => {
                         imageSrc='/simpleEQ.png'
                         demoURL=''
                         codeURL='https://github.com/NDMyers/SimpleEQ'
+                        hasDemo={false}
                     />
                 </div>
             </div>
@@ -111,7 +116,7 @@ const Quickview: FC<QuickviewProps> = ({}) => {
 
 
         {!showProjects &&
-        <div className='hidden sm:flex flex-col justify-evenly items-center w-3/4 flex-wrap overflow-y-auto overflow-x-hidden max-w-3xl'>
+        <div className='hidden sm:flex flex-col justify-evenly items-center w-3/4 flex-wrap max-w-3xl'>
             <div className='flex flex-col flex-wrap p-6'>
                 <p className='text-violet-400 font-bold text-4xl pb-4 text-center'>Languages</p>
                 <div className='flex flex-row flex-wrap justify-center bg-slate-800 rounded-xl p-2'>

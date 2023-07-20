@@ -19,7 +19,7 @@ const PageOne: FC<PageOneProps> = ({ }) => {
 
 
     return (
-        <motion.div className='w-full overflow-hidden bg-slate-900'
+        <motion.div className='w-full bg-slate-900'
             // initial={{ opacity: 0 }}
             // animate={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -28,7 +28,7 @@ const PageOne: FC<PageOneProps> = ({ }) => {
                 duration: 0.8,
             }}>
 
-            <NavBar pageName='Home' />
+            {/* <NavBar pageName='Home' /> */}
 
             <div className='flex flex-col w-full justify-center px-6 relative'>
                 <div className='flex w-screen h-screen absolute z-0 justify-center'>
@@ -78,47 +78,9 @@ const PageOne: FC<PageOneProps> = ({ }) => {
                     <p className='text-slate-300 xl:text-xl text-lg text-center tracking-tighter'>Excited to and comfortable with tackling new and diverse problems and to contribute to the overall cooperative success of any team. </p>
                     </div>
 
-
-                    {/* <div className='hidden sm:flex lg:pt-10 pt-5 max-w-lg'>
-                        <p className='text-slate-300 xl:text-xl text-lg text-center tracking-tighter'>In a hurry? 
-                            <Scroll.Link className='hover:cursor-pointer' to='qview' activeClass='active' duration={500} offset={50} spy={true} smooth={true}>
-                                <span className='text-emerald-700 font-bold'> Click here or scroll down </span>
-                            </Scroll.Link>
-                             to get a quick overview of my projects and skills.
-                        </p>
-                    </div> */}
-
-                    {/* <div className='w-full h-[2px] mt-4 sm:mt-6  bg-emerald-700'>
-                        <div className='hidden sm:flex py-8'>
-                            <p className='text-slate-600 text-sm'>Coded using Next.js and TailwindCSS, deployed on Vercel</p>
-                        </div>
-                    </div> */}
-                    
-                    {/* <div className='sm:hidden max-w-xs pt-9'>
-                        <p className='text-slate-300 text-md text-center tracking-tight'>I'm a 2023 new graduate with a B.S. in Computer Science and a passion for web development, data analysis and network protocols</p>
-                    </div>
-
-                    <div className='sm:hidden max-w-xs pt-9'>
-                        <p className='text-slate-300 text-md text-center tracking-tight'>In today's market <span className='font-bold text-emerald-700'>time is money</span>, so are some quick looks at my projects and skills, with more information about them and myself if you desire in the menu directories. </p>
-                    </div> */}
-
-                    {/* <div className='sm:hidden text-white pt-12 flex justify-center items-center'>
-                        <Scroll.Link to='quickview' activeClass='active' duration={500} offset={50} spy={true} smooth={true}>
-                            <LucideArrowDown className=' flex animate-bounce hover:text-emerald-700 hover:cursor-pointer'/>
-                        </Scroll.Link>
-                    </div> */}
                 </div>
             </div>
         </motion.div>
-
-        // <div className='w-full h-screen'>
-        //     <div className='w-full h-screen'>
-        //         1
-        //     </div>
-        //     <div className='w-full h-screen'>
-        //         2
-        //     </div>
-        // </div>
 
     )
 }

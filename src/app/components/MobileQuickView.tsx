@@ -29,7 +29,7 @@ const MobileQuickView: FC<MobileQuickViewProps> = ({}) => {
 
     return (
 
-        <motion.div id='quickview' className='sm:hidden flex flex-col justify-center items-center w-full flex-wrap overflow-y-hidden'
+        <motion.div id='quickview' className='sm:hidden flex flex-col justify-center items-center w-full flex-wrap'
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{
@@ -63,7 +63,7 @@ const MobileQuickView: FC<MobileQuickViewProps> = ({}) => {
 
                 <AnimatePresence mode="wait">
                     {showProjects &&
-                    <motion.div className='flex flex-row justify-evenly items-center flex-wrap overflow-y-hidden overflow-x-hidden'
+                    <motion.div className='flex flex-row justify-evenly items-center flex-wrap '
                         initial={{ opacity: 0}}
                         animate={{ opacity: 1}}
                         exit={{ opacity: 0}}
@@ -75,6 +75,7 @@ const MobileQuickView: FC<MobileQuickViewProps> = ({}) => {
                             imageSrc='/tt.png'
                             demoURL='https://tiktoktourneys.vercel.app'
                             codeURL='https://github.com/NDMyers/TikTok-Tournaments'
+                            hasDemo={true}
                         />
                         <ProjectDiv 
                             title='Picklepals' 
@@ -82,7 +83,8 @@ const MobileQuickView: FC<MobileQuickViewProps> = ({}) => {
                             madeWith='Made with: Next.js, TailwindCSS, TypeScript, Redis Database'
                             imageSrc='/picklepals.png'
                             demoURL='https://picklepals.vercel.app'
-                            codeURL='a'
+                            codeURL='https://github.com/NDMyers/picklepals'
+                            hasDemo={true}
                         />
                         <ProjectDiv 
                             title='My TCP Tahoe/Reno' 
@@ -90,7 +92,8 @@ const MobileQuickView: FC<MobileQuickViewProps> = ({}) => {
                             madeWith='Made with: Python'
                             imageSrc='/renoAlice.png'
                             demoURL=''
-                            codeURL='a'
+                            codeURL='https://github.com/NDMyers/Coding-Projects/tree/main/TCP-Project'
+                            hasDemo={false}
                         />
                         <ProjectDiv 
                             title='User Dictionary' 
@@ -98,7 +101,8 @@ const MobileQuickView: FC<MobileQuickViewProps> = ({}) => {
                             madeWith='Made with: Kotlin, Android Studio'
                             imageSrc='/dict.png'
                             demoURL=''
-                            codeURL='a'
+                            codeURL='https://github.com/NDMyers/Coding-Projects/tree/main/User-Dictionary-App'
+                            hasDemo={false}
                         />
                         <ProjectDiv 
                             title='Audio Equalizer Plugin' 
@@ -106,7 +110,8 @@ const MobileQuickView: FC<MobileQuickViewProps> = ({}) => {
                             madeWith='Made with: C++, JUCE Framework'
                             imageSrc='/simpleEQ.png'
                             demoURL=''
-                            codeURL='a'
+                            codeURL='https://github.com/NDMyers/SimpleEQ'
+                            hasDemo={false}
                         />
                     </motion.div> }
 
@@ -145,7 +150,7 @@ const MobileQuickView: FC<MobileQuickViewProps> = ({}) => {
                     </motion.div>} */}
 
                     {!showProjects &&
-                        <div className='flex flex-col justify-evenly items-start w-3/4 flex-wrap overflow-y-auto overflow-x-hidden max-w-3xl'>
+                        <div className='flex flex-col justify-evenly items-start w-3/4 flex-wrap max-w-3xl'>
                             <div className='flex flex-col flex-wrap p-6'>
                                 <p className='text-violet-400 font-bold text-4xl pb-4 text-center'>Languages</p>
                                 <div className='flex flex-row flex-wrap justify-center bg-slate-800 rounded-xl p-4'>
