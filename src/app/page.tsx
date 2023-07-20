@@ -110,7 +110,7 @@ const Page = ({ }) => {
     <main>
 
       {isDoneLoading && (
-        <motion.div className='bg-slate-00'
+        <motion.div className='bg-slate-900'
           transition={{
             ease: "easeIn",
             duration: 0.7,

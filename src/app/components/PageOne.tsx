@@ -19,7 +19,7 @@ const PageOne: FC<PageOneProps> = ({ }) => {
 
 
     return (
-        <motion.div className='w-full bg-slate-900 overflow-x-hidden'
+        <motion.div className=' bg-slate-900'
             // initial={{ opacity: 0 }}
             // animate={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -31,7 +31,7 @@ const PageOne: FC<PageOneProps> = ({ }) => {
             {/* <NavBar pageName='Home' /> */}
 
             <div className='flex flex-col w-full justify-center px-6 relative'>
-                <div className='flex w-screen h-screen absolute z-0 justify-center'>
+                <div className='flex w-[98vw] h-full absolute z-0 justify-center'>
                     <ParticlesComponent />
                 </div>
                 <div className='flex flex-col justify-start items-center flex-1 pt-24 z-10'>
