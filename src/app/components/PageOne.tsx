@@ -19,7 +19,7 @@ const PageOne: FC<PageOneProps> = ({ }) => {
 
 
     return (
-        <motion.div className='w-full bg-slate-900'
+        <motion.div className='w-full bg-slate-900 overflow-x-hidden'
             // initial={{ opacity: 0 }}
             // animate={{ opacity: 1 }}
             viewport={{ once: true }}
