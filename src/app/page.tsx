@@ -16,30 +16,26 @@ interface pageProps {
 }
 
 const useIntro = () => {
-  if( typeof window !== 'undefined' ) {
-    const storage = window.localStorage
-    const currTimestamp = Date.now()
-    const timeStamp = JSON.parse(storage.getItem('timestamp') || '1000')
-    const timeLimit = 3 * 60 * 1000 // 3 hours
-    const hasTimePassed = currTimestamp - timeStamp > timeLimit
+  const storage = window.localStorage 
+  const currTimestamp = Date.now()
+  const timeStamp = JSON.parse(storage.getItem('timestamp') || '1000')
+  const timeLimit = 3 * 60 * 1000 // 3 hours
+  const hasTimePassed = currTimestamp - timeStamp > timeLimit
 
-    useEffect(() => {
-      hasTimePassed ? 
-        storage.setItem('timestamp', currTimestamp.toString())
-        :
-        storage.setItem('timestamp', timeStamp.toString())
-    }, [currTimestamp, hasTimePassed, storage, timeStamp])
+  useEffect(() => {
+    hasTimePassed ? 
+      storage.setItem('timestamp', currTimestamp.toString())
+      :
+      storage.setItem('timestamp', timeStamp.toString())
+  }, [currTimestamp, hasTimePassed, storage, timeStamp])
 
-    return hasTimePassed
-  } else {
-    
-  }
+  return hasTimePassed
 }
 
 const Page = ({ }) => {
 
   const [isDoneLoading, setIsDoneLoading] = useState(false)
-  const showAnimation = useIntro()
+  const showAnimation = typeof window !== undefined ? useIntro() : null
   const [hasLoadedBefore, setHasLoadedBefore] = useState(Boolean)
 
   useEffect(() => {
