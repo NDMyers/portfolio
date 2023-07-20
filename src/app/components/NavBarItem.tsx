@@ -12,11 +12,6 @@ interface NavBarItemProps {
 
 const NavBarItem: FC<NavBarItemProps> = ({ title, isResume, isVisible }) => {
 
-    // const notInHomePage = title ==='Home'
-    // if( notInHomePage ) {
-    //     title = '/'
-    // }
-
     return (
         
         <div className='w-full h-full'>
@@ -24,7 +19,6 @@ const NavBarItem: FC<NavBarItemProps> = ({ title, isResume, isVisible }) => {
                     <Link href={ `https://drive.google.com/file/d/1qq0Ugv_BOCqdK1ZLcVStps-aI0Zxis03/view?usp=sharing` } >
                         <motion.div className='flex justify-center items-center w-full h-full text-white group'
                             whileHover={ isVisible ? {
-                                scale: 1.02,
                                 cursor: "pointer",
                                 borderRadius: "0.5rem",
                                 backgroundColor: "rgb(30, 41, 59)"
@@ -48,7 +42,6 @@ const NavBarItem: FC<NavBarItemProps> = ({ title, isResume, isVisible }) => {
                     >
                         <motion.div className='flex justify-center items-center w-full h-full text-white group'
                             whileHover={ isVisible ? {
-                                scale: 1.1,
                                 cursor: "pointer",
                                 borderRadius: "0.5rem",
                                 backgroundColor: "rgb(30, 41, 59)"

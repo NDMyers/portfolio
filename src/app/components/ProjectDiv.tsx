@@ -16,19 +16,10 @@ interface ProjectDivProps {
 
 const ProjectDiv: FC<ProjectDivProps> = ({ title, madeWith, description, imageSrc, demoURL, codeURL, hasDemo }) => {
 
-    // const [hasDemo, setHasDemo] = useState<Boolean>(true)
-    // const [hasCode, setHasCode] = useState<Boolean>(true)
-
-    // useEffect(() => {
-    //     if( demoURL === '' ) {
-    //         setHasDemo(false)
-    //     }
-    // }, [demoURL])
-
     return (
 
         <motion.div
-            className='w-[420px] h-[950px] sm:w-[700px] sm:h-[950px] lg:w-[700px] lg:h-[700px] rounded-xl bg-slate-800 flex flex-col flex-wrap justify-normal items-center m-8'
+            className='w-2/3 sm:w-[700px] sm:h-[950px] lg:w-[700px] lg:h-[700px] rounded-xl bg-slate-800 flex flex-col flex-wrap justify-normal items-center m-8'
         >
             <div className='w-full h-1/2 flex justify-center bg-slate-900 rounded-xl'>
                 <Image className='flex w-full rounded-t-xl' src={imageSrc} alt='Project Screenshot' width={800} height={2000} />
@@ -40,10 +31,10 @@ const ProjectDiv: FC<ProjectDivProps> = ({ title, madeWith, description, imageSr
                     <p className='text-lg text-zinc-400 text-center pt-2'>{madeWith}</p>
                     <p className='font-light text-xl text-slate-200 text-left tracking-tight pt-4'>{description}</p>
                 </div>
-                <div className='flex flex-row flex-wrap '>
+                <div className='flex flex-row flex-wrap outline-dashed'>
                     {hasDemo && 
                         <motion.div whileHover={{ scale: 1.1 }}>
-                            <a href={demoURL} className='flex flex-row flex-wrap justify-evenly items-center w-32 h-10 bg-blue-500 rounded-full m-4'>
+                            <a href={demoURL} className='flex flex-row flex-wrap justify-center items-center w-32 h-10 bg-blue-500 rounded-full m-4'>
                                 <Play className='text-slate-200 fill-slate-200'/>
                                 <p className='text-slate-200 font-bold text-sm text-center'>Demo</p>
                             </a>

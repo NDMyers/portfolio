@@ -20,15 +20,11 @@ const PageOne: FC<PageOneProps> = ({ }) => {
 
     return (
         <motion.div className=' bg-slate-900 overflow-x-hidden'
-            // initial={{ opacity: 0 }}
-            // animate={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{
                 ease:"easeIn",
                 duration: 0.8,
             }}>
-
-            {/* <NavBar pageName='Home' /> */}
 
             <div className='flex flex-col w-full justify-center px-6 relative'>
                 <div className='flex w-screen h-full absolute z-0 justify-center'>
