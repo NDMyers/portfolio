@@ -27,6 +27,7 @@ const ParticlesComponent: FC<ParticlesComponentProps> = ({ }) => {
     return (
 
         <Particles
+            className='w-full h-full'
             id="tsparticles"
             init={particlesInit}
             loaded={particlesLoaded}

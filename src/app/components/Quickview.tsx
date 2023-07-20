@@ -29,8 +29,8 @@ const Quickview: FC<QuickviewProps> = ({}) => {
 
     return (
 
-    <div id='qview' className='hidden w-full h-screen sm:flex flex-col justify-normal items-center flex-wrap'>
-        <div className='hidden sm:flex flex-row justify-center w-96 pt-10 '>
+    <div id='Projects' className='hidden w-full sm:flex flex-col justify-normal items-center flex-wrap py-10'>
+        <div className='hidden sm:flex flex-row justify-center w-96 pb-10'>
             <motion.div 
                 className={showProjects ? `sm:w-60 md:w-72 xl:w-full xl:h-[90px] bg-slate-400 flex justify-start rounded-[50px] p-3 cursor-pointer` 
                                         : `sm:w-60 md:w-72 xl:w-full xl:h-[90px] bg-slate-400 flex justify-end rounded-[50px] p-3 cursor-pointer` } 
@@ -53,18 +53,66 @@ const Quickview: FC<QuickviewProps> = ({}) => {
             </motion.div>
         </div>
 
-        {showProjects &&
-        <div className='hidden sm:flex flex-row justify-evenly items-center h-3/4 w-full flex-wrap overflow-y-auto overflow-x-hidden'>
+        {/* {showProjects &&
+        <div className='hidden sm:flex flex-row justify-evenly items-center w-full flex-wrap overflow-y-hidden overflow-x-hidden'>
             <ProjectDiv title='TikTok Tournaments' description='An interactive web app where users can enter TikTok URLs to compete in a popularity tournament bracket, example tournament included!' />
             <ProjectDiv title='Picklepals' description='Real time chatting web app featuring friend requests and chatting that utilizes google login for authentication'/>
             <ProjectDiv title='My TCP Tahoe/Reno' description='A Pythonic recreation of industry standard TCP networking protocols using client-server interactions, self-made congestion control, sockets, and data packet formatting' />
             <ProjectDiv title='User Dictionary' description='An Android app that allows users to quickly create and edit their own minimalistic dictionary of custom words and definitions for injokes and more' />
             <ProjectDiv title='Audio Equalizer Plugin' description='An aesthetically pleasing equalizer plugin that takes in audio files and allows for seamless user manipulation of its sound waves' />
-        </div> }
+        </div> } */}
+
+        {showProjects &&
+            <div className='flex flex-col w-3/4'>
+                <div className='flex flex-row flex-wrap justify-evenly'>
+                    <ProjectDiv 
+                        title='TikTok Tournaments' 
+                        description='An interactive web app where users can enter TikTok URLs to compete in a popularity tournament bracket, example tournament included! Users are displayed two videos per bracket and choose their favorite each time. The winning video is then algorithmically calculated and shown to the user. Version control used with Git.'
+                        madeWith='Made with: Next.js, TailwindCSS, JavaScript, Redis Database' 
+                        imageSrc='/tt.png'
+                        demoURL='https://tiktoktourneys.vercel.app'
+                        codeURL='https://github.com/NDMyers/TikTok-Tournaments'
+                    />
+                    <ProjectDiv 
+                        title='Picklepals' 
+                        description='Real time chatting web app featuring friend requests and chatting that utilizes google login for authentication. Once authenticated for path/route protection, the user can then add or deny friends and begin chatting with them. Version control used with Git.'
+                        madeWith='Made with: Next.js, TailwindCSS, TypeScript, Redis Database'
+                        imageSrc='/picklepals.png'
+                        demoURL='https://picklepals.vercel.app'
+                        codeURL='https://github.com/NDMyers/picklepals'
+                    />
+                    <ProjectDiv 
+                        title='My TCP Tahoe/Reno' 
+                        description='A Pythonic recreation of industry standard TCP networking protocols using client-server interactions, self-made congestion control, sockets, and data packet formatting. Creates a graphical representation of data flow in relation to CWND per transmission round.' 
+                        madeWith='Made with: Python'
+                        imageSrc='/renoAlice.png'
+                        demoURL=''
+                        codeURL='https://github.com/NDMyers/Coding-Projects/tree/main/TCP-Project'
+                    />
+                    <ProjectDiv 
+                        title='User Dictionary' 
+                        description='An Android app that allows users to quickly create and edit their own minimalistic dictionary of custom words and definitions for injokes and more. Animations and fail-safe messages included for user clarity as they create or edit their content.' 
+                        madeWith='Made with: Kotlin, Android Studio'
+                        imageSrc='/dict.png'
+                        demoURL=''
+                        codeURL='https://github.com/NDMyers/Coding-Projects/tree/main/User-Dictionary-App'
+                    />
+                    <ProjectDiv 
+                        title='Audio Equalizer Plugin' 
+                        description='An aesthetically pleasing equalizer plugin that takes in audio files and allows for seamless user manipulation of its sound waves. Users can input a song or audio file and see real time sound wave manipulation correlating to what they hear for instant feedback from the adjustive knobs and buttons.' 
+                        madeWith='Made with: C++, JUCE Framework'
+                        imageSrc='/simpleEQ.png'
+                        demoURL=''
+                        codeURL='https://github.com/NDMyers/SimpleEQ'
+                    />
+                </div>
+            </div>
+        }
+
 
         {!showProjects &&
-        <div className='hidden sm:flex flex-col justify-evenly items-center h-3/4 w-3/4 flex-wrap overflow-y-auto overflow-x-hidden max-w-3xl'>
-            <div className='flex flex-col flex-wrap'>
+        <div className='hidden sm:flex flex-col justify-evenly items-center w-3/4 flex-wrap overflow-y-auto overflow-x-hidden max-w-3xl'>
+            <div className='flex flex-col flex-wrap p-6'>
                 <p className='text-violet-400 font-bold text-4xl pb-4 text-center'>Languages</p>
                 <div className='flex flex-row flex-wrap justify-center bg-slate-800 rounded-xl p-2'>
                     <SkillsDiv title='C++' description='' />
@@ -77,7 +125,7 @@ const Quickview: FC<QuickviewProps> = ({}) => {
                     <SkillsDiv title='CSS' description=''/>
                 </div>
             </div>
-            <div className='flex flex-col'>
+            <div className='flex flex-col flex-wrap p-6'>
                 <p className='text-violet-400 font-bold text-4xl pb-4 text-center'>Frameworks / Databases</p>
                 <div className='flex flex-row flex-wrap justify-center bg-slate-800 rounded-xl p-2'>
                     <SkillsDiv title='React' description='' />
@@ -89,7 +137,7 @@ const Quickview: FC<QuickviewProps> = ({}) => {
 
                 </div>
             </div>
-            <div className='flex flex-col'>
+            <div className='flex flex-col flex-wrap p-6'>
                 <p className='text-violet-400 font-bold text-4xl pb-4 text-center'>Developer Tools</p>
                 <div className='flex flex-row flex-wrap justify-center bg-slate-800 rounded-xl p-2'>
                     <SkillsDiv title='Git' description='' />

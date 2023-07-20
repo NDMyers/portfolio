@@ -11,7 +11,7 @@ interface SkillsDivProps {
 const SkillsDiv: FC<SkillsDivProps> = ({ title, description }) => {
     return (
 
-        <motion.div className='w-auto h-auto flex flex-col group rounded-lg border-slate-800'
+        <motion.div className='flex flex-col group rounded-lg border-slate-800'
             whileHover={{
                 scale: 1.02,
                 borderRadius: "0.5rem",

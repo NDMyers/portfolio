@@ -13,7 +13,7 @@ const NavBar: FC<NavBarProps> = ({ pageName }) => {
 
     const [prevScrollPos, setPrevScrollPos] = useState(-1);
     const [visible, setVisible] = useState(true)
-    const [isHiding, setIsHiding] = useState(false)
+    const [isHiding, setIsHiding] = useState(Boolean)
 
     const scrollHandler = () => {
         const currentScrollPos = window.scrollY
@@ -36,15 +36,19 @@ const NavBar: FC<NavBarProps> = ({ pageName }) => {
     const itemVariants: Variants = {
         showingNav: {
             opacity: 1,
-            // transitionEnd: {
-            //     display: "block"
-            // }
+            transition: {
+                duration: 0,
+                ease: "easeIn"
+            },
+            transitionEnd: {
+                display: "flex"
+            }
         },
         hidingNav: {
             opacity: 0,
-            // transitionEnd: {
-            //     display: "none"
-            // }
+            transitionEnd: {
+                display: "none"
+            }
         }
     }
 
@@ -58,7 +62,7 @@ const NavBar: FC<NavBarProps> = ({ pageName }) => {
                 variants={itemVariants}
                 transition={{
                     duration: 0.4,
-                    ease: 'easeInOut'
+                    ease: 'easeInOut',
                 }}
                 >
                 {/* <div className='w-full h-full z-0 absolute'>
@@ -66,17 +70,12 @@ const NavBar: FC<NavBarProps> = ({ pageName }) => {
                 </div> */}
                 <div className='flex flex-row w-full h-20 px-4 justify-evenly fixed z-10'>
                     <NavBarItem title='Resume' isResume={true} isVisible={visible}/>
-                    <NavBarItem title={ pathname === '/projects' ? 'Home' : 'Projects' } isResume={false} isVisible={visible}/>
+                    <NavBarItem title='Projects' isResume={false} isVisible={visible}/>
                     <NavBarItem title={ pathname === '/about' ? 'Home' : 'Education' } isResume={false} isVisible={visible}/>
                     <NavBarItem title='Contact Me' isResume={false} isVisible={visible}/>
                 </div>
             </motion.div> 
-
-            <div className=''>
-
-            </div>
         </div>
-        
     )
 }
 

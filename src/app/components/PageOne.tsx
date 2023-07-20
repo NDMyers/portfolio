@@ -27,13 +27,9 @@ const PageOne: FC<PageOneProps> = ({ }) => {
                 ease:"easeIn",
                 duration: 0.8,
             }}>
-            {/* <div className='flex w-screen h-screen absolute justify-center'>
-                <ParticlesComponent />
-            </div> */}
+
             <NavBar pageName='Home' />
-            {/* <div className='flex justify-center items-center w-full h-1/2 z-0 absolute outline-dashed'>
-                <ParticlesComponent />
-            </div> */}
+
             <div className='flex flex-col w-full justify-center px-6 relative'>
                 <div className='flex w-screen h-screen absolute z-0 justify-center'>
                     <ParticlesComponent />
@@ -43,7 +39,7 @@ const PageOne: FC<PageOneProps> = ({ }) => {
                         <Image src='/headshot.jpg' alt='Photo of Nick Myers' className='rounded-full' width={2000} height={2000}/>
                     </div>
                     <div>
-                        <p className='flex text-white text-6xl xl:text-7xl font-bold text-center'>Hi! I'm<br></br>Nick Myers,</p>
+                        <p className='text-white text-6xl xl:text-7xl font-bold text-center'><span className='text-emerald-500'>Hi!</span> I'm<br></br>Nick Myers,</p>
                     </div>
                     <div className='text-slate-300 xl:text-3xl text-2xl font-bold sm:text-left sm:pb-4 pb-0 text-center pt-2 sm:pt-0'>
                         <Typewriter onInit={(typewriter) => {
@@ -61,25 +57,25 @@ const PageOne: FC<PageOneProps> = ({ }) => {
                     </div>
 
                     <div className='flex justify-center h-10 w-12 mt-4 sm:mt-0'>
-                        <motion.div className='flex mr-4' whileHover={{ scale: 1.4 }}>
+                        <motion.a className='flex mr-4' whileHover={{ scale: 1.4 }} href='https://github.com/NDMyers'>
                             <Image className='flex mr-12 hover:cursor-pointer' src='/github.png' alt='GitHub logo' height={800} width={800}/>                        
-                        </motion.div>
+                        </motion.a>
 
-                        <motion.div className='flex mr-4' whileHover={{ scale: 1.4 }}>
+                        <motion.a className='flex mr-4' whileHover={{ scale: 1.4 }} href='https://www.linkedin.com/in/nicholas-myers-b87244246/'>
                             <Image className='flex mr-12 hover:cursor-pointer' src='/linkedin.png' alt='LinkedIn logo' height={800} width={800} />                       
-                        </motion.div>
+                        </motion.a>
 
-                        <motion.div className='flex' whileHover={{ scale: 1.4 }}>
+                        <motion.a className='flex' whileHover={{ scale: 1.4 }} href='mailto:ndmyers@ucdavis.edu'>
                             <Image className='flex mr-14 hover:cursor-pointer' src='/gmail2.png' alt='Gmail logo' height={800} width={800} />                    
-                        </motion.div>
+                        </motion.a>
                     </div>
 
-                    <div className='hidden sm:flex lg:pt-8 pt-5 max-w-lg'>
-                        <p className='text-slate-300 xl:text-xl text-lg text-center tracking-tighter'>I'm a 2023 new graduate with a B.S. in Computer Science with a passion for web development, music, data analysis, and network protocols.</p>
+                    <div className='flex lg:pt-8 pt-5 max-w-xs sm:max-w-lg'>
+                        <p className='text-slate-300 xl:text-xl text-lg text-center tracking-tighter'>I'm a 2023 new graduate with a B.S. in Computer Science with a passion for web development, music, databases, and network protocols.</p>
                     </div>
 
-                    <div className='hidden sm:flex lg:pt-10 pt-5 max-w-lg'>
-                    <p className='text-slate-300 xl:text-xl text-lg text-center tracking-tighter'>blah blah</p>
+                    <div className='flex lg:pt-10 pt-5 max-w-xs sm:max-w-lg pb-10'>
+                    <p className='text-slate-300 xl:text-xl text-lg text-center tracking-tighter'>Excited to and comfortable with tackling new and diverse problems and to contribute to the overall cooperative success of any team. </p>
                     </div>
 
 
@@ -98,19 +94,19 @@ const PageOne: FC<PageOneProps> = ({ }) => {
                         </div>
                     </div> */}
                     
-                    <div className='sm:hidden max-w-xs pt-9'>
+                    {/* <div className='sm:hidden max-w-xs pt-9'>
                         <p className='text-slate-300 text-md text-center tracking-tight'>I'm a 2023 new graduate with a B.S. in Computer Science and a passion for web development, data analysis and network protocols</p>
                     </div>
 
                     <div className='sm:hidden max-w-xs pt-9'>
                         <p className='text-slate-300 text-md text-center tracking-tight'>In today's market <span className='font-bold text-emerald-700'>time is money</span>, so are some quick looks at my projects and skills, with more information about them and myself if you desire in the menu directories. </p>
-                    </div>
+                    </div> */}
 
-                    <div className='sm:hidden text-white pt-12 flex justify-center items-center'>
+                    {/* <div className='sm:hidden text-white pt-12 flex justify-center items-center'>
                         <Scroll.Link to='quickview' activeClass='active' duration={500} offset={50} spy={true} smooth={true}>
-                            <LucideArrowDown className='mr-5 flex animate-bounce hover:text-emerald-700 hover:cursor-pointer'/>
+                            <LucideArrowDown className=' flex animate-bounce hover:text-emerald-700 hover:cursor-pointer'/>
                         </Scroll.Link>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </motion.div>

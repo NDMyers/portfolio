@@ -112,7 +112,7 @@ const Page = ({ }) => {
             duration: 0.7,
           }}
         >
-          <MobileNavMenu />
+          {/* <MobileNavMenu /> */}
           {/* <NavBar pageName="Home"/> */}
           <PageOne />
           <MobileQuickView />
