@@ -31,10 +31,10 @@ const ProjectDiv: FC<ProjectDivProps> = ({ title, madeWith, description, imageSr
                     <p className='text-lg text-zinc-400 text-center pt-2'>{madeWith}</p>
                     <p className='font-light text-xl text-slate-200 text-left tracking-tight pt-4'>{description}</p>
                 </div>
-                <div className='flex flex-row flex-wrap outline-dashed'>
+                <div className='flex sm:flex-row flex-col flex-wrap'>
                     {hasDemo && 
                         <motion.div whileHover={{ scale: 1.1 }}>
-                            <a href={demoURL} className='flex flex-row flex-wrap justify-center items-center w-32 h-10 bg-blue-500 rounded-full m-4'>
+                            <a href={demoURL} className='flex flex-row flex-wrap justify-center items-center w-32 h-10 bg-blue-500 rounded-full m-3 sm:m-4'>
                                 <Play className='text-slate-200 fill-slate-200'/>
                                 <p className='text-slate-200 font-bold text-sm text-center'>Demo</p>
                             </a>
@@ -42,7 +42,7 @@ const ProjectDiv: FC<ProjectDivProps> = ({ title, madeWith, description, imageSr
                     }   
 
                     <motion.div whileHover={{ scale: 1.1 }}>
-                        <a href={codeURL} className='flex flex-row flex-wrap justify-evenly items-center w-32 h-10 bg-blue-500 rounded-full m-4'>
+                        <a href={codeURL} className='flex flex-row flex-wrap justify-evenly items-center w-32 h-10 bg-blue-500 rounded-full m-3 sm:m-4'>
                             <GithubIcon className='text-slate-200 fill-slate-200'/>
                             <p className='text-slate-200 font-bold text-sm text-center'>Code</p>
                         </a>

@@ -15,30 +15,11 @@ interface pageProps {
 
 }
 
-// const useIntro = () => {
-//   // const storage = window.localStorage 
-//   const currTimestamp = Date.now()
-//   const timeStamp = JSON.parse(storage.getItem('timestamp') || '1000')
-//   const timeLimit = 3 * 60 * 1000 // 3 hours
-//   const hasTimePassed = currTimestamp - timeStamp > timeLimit
-
-//   useEffect(() => {
-//     hasTimePassed ? 
-//       storage.setItem('timestamp', currTimestamp.toString())
-//       :
-//       storage.setItem('timestamp', timeStamp.toString())
-//   }, [currTimestamp, hasTimePassed, storage, timeStamp])
-
-//   return hasTimePassed
-// }
-
 const Page = ({ }) => {
 
   const [isDoneLoading, setIsDoneLoading] = useState(false)
   const [showAnimation, setShowAnimation] = useState(false)
-  // const storage = typeof window !== 'undefined' ? window.localStorage : null
-  // if()
-  // const showAnimation = useIntro()
+
   useEffect(() => {
     const storage = window.localStorage
     const currTimestamp = Date.now()
