@@ -15,27 +15,47 @@ interface pageProps {
 
 }
 
-const useIntro = () => {
-  const storage = window.localStorage 
-  const currTimestamp = Date.now()
-  const timeStamp = JSON.parse(storage.getItem('timestamp') || '1000')
-  const timeLimit = 3 * 60 * 1000 // 3 hours
-  const hasTimePassed = currTimestamp - timeStamp > timeLimit
+// const useIntro = () => {
+//   // const storage = window.localStorage 
+//   const currTimestamp = Date.now()
+//   const timeStamp = JSON.parse(storage.getItem('timestamp') || '1000')
+//   const timeLimit = 3 * 60 * 1000 // 3 hours
+//   const hasTimePassed = currTimestamp - timeStamp > timeLimit
 
-  useEffect(() => {
-    hasTimePassed ? 
-      storage.setItem('timestamp', currTimestamp.toString())
-      :
-      storage.setItem('timestamp', timeStamp.toString())
-  }, [currTimestamp, hasTimePassed, storage, timeStamp])
+//   useEffect(() => {
+//     hasTimePassed ? 
+//       storage.setItem('timestamp', currTimestamp.toString())
+//       :
+//       storage.setItem('timestamp', timeStamp.toString())
+//   }, [currTimestamp, hasTimePassed, storage, timeStamp])
 
-  return hasTimePassed
-}
+//   return hasTimePassed
+// }
 
 const Page = ({ }) => {
 
   const [isDoneLoading, setIsDoneLoading] = useState(false)
-  const showAnimation = typeof window !== undefined ? useIntro() : null
+  const [showAnimation, setShowAnimation] = useState(false)
+  // const storage = typeof window !== 'undefined' ? window.localStorage : null
+  // if()
+  // const showAnimation = useIntro()
+  useEffect(() => {
+    const storage = window.localStorage
+    const currTimestamp = Date.now()
+    const timeStamp = JSON.parse(storage.getItem('timestamp') || '1000')
+    const timeLimit = 3 * 60 * 1000
+    const hasTimePassed = currTimestamp - timeStamp > timeLimit
+
+    hasTimePassed ? 
+      storage.setItem('timestamp', currTimestamp.toString())
+      :
+      storage.setItem('timestamp', timeStamp.toString())
+    
+    setShowAnimation(hasTimePassed)
+  }, [])
+
+
+
   const [hasLoadedBefore, setHasLoadedBefore] = useState(Boolean)
 
   useEffect(() => {
