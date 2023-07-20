@@ -43,18 +43,18 @@ const ProjectDiv: FC<ProjectDivProps> = ({ title, madeWith, description, imageSr
                 <div className='flex flex-row flex-wrap '>
                     {hasDemo && 
                         <motion.div whileHover={{ scale: 1.1 }}>
-                            <Link href={demoURL} className='flex flex-row flex-wrap justify-evenly items-center w-32 h-10 bg-blue-500 rounded-full m-4'>
+                            <a href={demoURL} className='flex flex-row flex-wrap justify-evenly items-center w-32 h-10 bg-blue-500 rounded-full m-4'>
                                 <Play className='text-slate-200 fill-slate-200'/>
                                 <p className='text-slate-200 font-bold text-sm text-center'>Demo</p>
-                            </Link>
+                            </a>
                         </motion.div>
                     }   
 
                     <motion.div whileHover={{ scale: 1.1 }}>
-                        <Link href={codeURL} className='flex flex-row flex-wrap justify-evenly items-center w-32 h-10 bg-blue-500 rounded-full m-4'>
+                        <a href={codeURL} className='flex flex-row flex-wrap justify-evenly items-center w-32 h-10 bg-blue-500 rounded-full m-4'>
                             <GithubIcon className='text-slate-200 fill-slate-200'/>
                             <p className='text-slate-200 font-bold text-sm text-center'>Code</p>
-                        </Link>
+                        </a>
                     </motion.div>
                 </div>
             </div>

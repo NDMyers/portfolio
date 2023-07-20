@@ -53,15 +53,6 @@ const Quickview: FC<QuickviewProps> = ({}) => {
             </motion.div>
         </div>
 
-        {/* {showProjects &&
-        <div className='hidden sm:flex flex-row justify-evenly items-center w-full flex-wrap overflow-y-hidden overflow-x-hidden'>
-            <ProjectDiv title='TikTok Tournaments' description='An interactive web app where users can enter TikTok URLs to compete in a popularity tournament bracket, example tournament included!' />
-            <ProjectDiv title='Picklepals' description='Real time chatting web app featuring friend requests and chatting that utilizes google login for authentication'/>
-            <ProjectDiv title='My TCP Tahoe/Reno' description='A Pythonic recreation of industry standard TCP networking protocols using client-server interactions, self-made congestion control, sockets, and data packet formatting' />
-            <ProjectDiv title='User Dictionary' description='An Android app that allows users to quickly create and edit their own minimalistic dictionary of custom words and definitions for injokes and more' />
-            <ProjectDiv title='Audio Equalizer Plugin' description='An aesthetically pleasing equalizer plugin that takes in audio files and allows for seamless user manipulation of its sound waves' />
-        </div> } */}
-
         {showProjects &&
             <div className='flex flex-col w-3/4'>
                 <div className='flex flex-row flex-wrap justify-evenly'>

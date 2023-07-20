@@ -54,8 +54,6 @@ const Page = ({ }) => {
     setShowAnimation(hasTimePassed)
   }, [])
 
-
-
   const [hasLoadedBefore, setHasLoadedBefore] = useState(Boolean)
 
   useEffect(() => {
@@ -64,6 +62,11 @@ const Page = ({ }) => {
     }
   }, [showAnimation])
 
+  useEffect(() => {
+    window.addEventListener('loadstart', ()=> {
+      window.location.reload()
+    })
+  }, [])
 
   const LoadingDot = {
     display: "block",
