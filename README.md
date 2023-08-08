@@ -1,3 +1,3 @@
-# My SWE Portfolio written with TypeScript, TailwindCSS, and deployed with vercel
+# Visit here: nickmyers.vercel.app 
 
-## nickmyers.vercel.app
+## My SWE Portfolio written with TypeScript, TailwindCSS, and deployed with vercel
