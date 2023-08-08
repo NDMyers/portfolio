@@ -1,2 +1,2 @@
-## Link: nickmyers.vercel.app
+## [Visit Here](nickmyers.vercel.app)
 My SWE Portfolio written with TypeScript, TailwindCSS, and deployed with vercel.
