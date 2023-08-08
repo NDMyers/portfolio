@@ -62,7 +62,7 @@ const Quickview: FC<QuickviewProps> = ({}) => {
                         madeWith='Made with: Next.js, TailwindCSS, JavaScript, Redis Database' 
                         imageSrc='/tt.png'
                         demoURL='https://tiktoktourneys.vercel.app'
-                        codeURL='https://github.com/NDMyers/TikTok-Tournaments'
+                        codeURL='https://github.com/NDMyers/tiktok-tournaments'
                         hasDemo={true}
                     />
                     <ProjectDiv 
@@ -80,7 +80,7 @@ const Quickview: FC<QuickviewProps> = ({}) => {
                         madeWith='Made with: Python'
                         imageSrc='/renoAlice.png'
                         demoURL=''
-                        codeURL='https://github.com/NDMyers/Coding-Projects/tree/main/TCP-Project'
+                        codeURL='https://github.com/NDMyers/academic-projects/tree/main/tcp-project'
                         hasDemo={false}
                     />
                     <ProjectDiv 
@@ -89,7 +89,7 @@ const Quickview: FC<QuickviewProps> = ({}) => {
                         madeWith='Made with: Kotlin, Android Studio'
                         imageSrc='/dict.png'
                         demoURL=''
-                        codeURL='https://github.com/NDMyers/Coding-Projects/tree/main/User-Dictionary-App'
+                        codeURL='https://github.com/NDMyers/user-dictionary/tree/main'
                         hasDemo={false}
                     />
                     <ProjectDiv 
