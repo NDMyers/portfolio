@@ -16,7 +16,7 @@ const NavBarItem: FC<NavBarItemProps> = ({ title, isResume, isVisible }) => {
         
         <div className='w-full h-full'>
             {isResume &&
-                    <Link href={ `https://drive.google.com/file/d/1qq0Ugv_BOCqdK1ZLcVStps-aI0Zxis03/view?usp=sharing` } >
+                    <Link href={ `https://drive.google.com/file/d/1eAGqFnUC5r9b_KFCp4SR-Qzl__OXr_sI/view?usp=sharing` } >
                         <motion.div className='flex justify-center items-center w-full h-full text-white group'
                             whileHover={ isVisible ? {
                                 cursor: "pointer",
