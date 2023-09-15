@@ -61,7 +61,7 @@ const PageOne: FC<PageOneProps> = ({ }) => {
                             <Image className='flex mr-12 hover:cursor-pointer' src='/linkedin.png' alt='LinkedIn logo' height={800} width={800} />                       
                         </motion.a>
 
-                        <motion.a className='flex' whileHover={{ scale: 1.4 }} href='mailto:ndmyers@ucdavis.edu'>
+                        <motion.a className='flex' whileHover={{ scale: 1.4 }} href='mailto:ndm81001@gmail.com'>
                             <Image className='flex mr-14 hover:cursor-pointer' src='/gmail2.png' alt='Gmail logo' height={800} width={800} />                    
                         </motion.a>
                     </div>

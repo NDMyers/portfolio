@@ -37,7 +37,7 @@ const PageTwo: FC<PageTwoProps> = ({}) => (
                     href=''
                 >   
                         <LucideMail className='w-1/2 h-1/2 mb-2 text-blue-500 fill-white' />
-                        <p className='text-slate-300 font-semibold text-md'>ndmyers@ucdavis.edu</p>
+                        <p className='text-slate-300 font-semibold text-md'>ndm81001@gmail.com</p>
                 </motion.a>
                 <motion.a 
                     className='flex flex-col justify-center items-center w-52 h-40 bg-slate-800 rounded-md m-4'
