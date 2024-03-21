@@ -26,8 +26,8 @@ const PageOne: FC<PageOneProps> = ({ }) => {
                 duration: 0.8,
             }}>
 
-            <div className='flex flex-col w-full justify-center px-6 relative'>
-                <div className='flex w-screen h-full absolute z-0 justify-center'>
+            <div className='flex flex-col w-full justify-center items-center px-6 relative'>
+                <div className='flex w-[100rem] h-full absolute z-0 justify-center'>
                     <ParticlesComponent />
                 </div>
                 <div className='flex flex-col justify-start items-center flex-1 pt-24 z-10'>
@@ -67,11 +67,11 @@ const PageOne: FC<PageOneProps> = ({ }) => {
                     </div>
 
                     <div className='flex lg:pt-8 pt-5 max-w-xs sm:max-w-lg'>
-                        <p className='text-slate-300 xl:text-xl text-lg text-center tracking-tighter'>I'm a 2023 new graduate with a B.S. in Computer Science with a passion for web development, music, databases, and network protocols.</p>
+                        <p className='text-slate-300 xl:text-xl text-lg text-center tracking-tighter'>A.I. Trainer @DataAnnotation.<br></br>I develop impactful and elegant web-based solutions.</p>
                     </div>
 
                     <div className='flex lg:pt-10 pt-5 max-w-xs sm:max-w-lg pb-10'>
-                    <p className='text-slate-300 xl:text-xl text-lg text-center tracking-tighter'>Excited to and comfortable with tackling new and diverse problems and to contribute to the overall cooperative success of any team. </p>
+                    <p className='text-slate-300 xl:text-xl text-lg text-center tracking-tighter'>Passionate about innovative software,<br></br>collaborating in cross-functional teams<br></br>and communicating with clients for reliable outcomes.</p>
                     </div>
 
                 </div>

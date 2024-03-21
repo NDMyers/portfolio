@@ -55,6 +55,9 @@ const Quickview: FC<QuickviewProps> = ({}) => {
 
         {showProjects &&
             <div className='flex flex-col w-3/4'>
+                
+                {/* EXPERIENCE TODO */}
+
                 <div className='flex flex-row flex-wrap justify-evenly'>
                     <ProjectDiv 
                         title='TikTok Tournaments' 
@@ -66,7 +69,7 @@ const Quickview: FC<QuickviewProps> = ({}) => {
                         hasDemo={true}
                     />
                     <ProjectDiv 
-                        title='Picklepals' 
+                        title='Pickle Pals' 
                         description='Real time chatting web app featuring friend requests and chatting that utilizes google login for authentication. Once authenticated for path/route protection, the user can then add or deny friends and begin chatting with them. Version control used with Git.'
                         madeWith='Made with: Next.js, TailwindCSS, TypeScript, Redis Database'
                         imageSrc='/picklepals.png'
@@ -75,7 +78,7 @@ const Quickview: FC<QuickviewProps> = ({}) => {
                         hasDemo={true}
                     />
                     <ProjectDiv 
-                        title='My TCP Tahoe/Reno' 
+                        title='Client-server Architecture with TCP Tahoe/Reno' 
                         description='A Pythonic recreation of industry standard TCP networking protocols using client-server interactions, self-made congestion control, sockets, and data packet formatting. Creates a graphical representation of data flow in relation to CWND per transmission round.' 
                         madeWith='Made with: Python'
                         imageSrc='/renoAlice.png'

@@ -27,7 +27,7 @@ const MobileNavItem: FC<MobileNavItemProps> = ({ itemVariants, title }) => {
     },[title, pathname, isHomeNavButton])
 
     return (
-        <Link href={ isHomeNavButton ? '/' : ( isResumeNavButton ? 'https://drive.google.com/file/d/1qq0Ugv_BOCqdK1ZLcVStps-aI0Zxis03/view?usp=sharing' : `/${title.toLowerCase()}` ) }>
+        <Link href={ isHomeNavButton ? '/' : ( isResumeNavButton ? 'https://drive.google.com/file/d/1ooDgSPuyOcWo35RRF1lm5G9JdFYybt-M/view?usp=sharing' : `/${title.toLowerCase()}` ) }>
             <motion.li className={isUnclickable ? 'text-slate-400 p-2 hover:cursor-default' : 'text-slate-50 p-2 hover:cursor-pointer'} whileHover={{ scale: 1.1 }} variants={itemVariants}>{title}</motion.li>
         </Link>
     )

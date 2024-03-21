@@ -20,8 +20,8 @@ const PageTwo: FC<PageTwoProps> = ({}) => (
                 </div>
                 <div className='text-slate-300 font-semibold text-lg text-center pt-4'>
                     <ul>
-                        <li className=''>University of California - Davis</li>
-                        <li className='pt-3'>2023 Bachelor's of Science in Computer Science</li>
+                        <li className=''>University of California, Davis</li>
+                        <li className='pt-3'>B.S. in Computer Science (2019-2023)</li>
                     </ul>
                 </div>
             </div>
@@ -68,8 +68,8 @@ const PageTwo: FC<PageTwoProps> = ({}) => (
         {/* Footer */}
         <div className='w-[80%] h-[2px] mt-10 bg-emerald-700'>
             <div className='flex py-8 justify-between'>
-                <p className='text-slate-600 text-sm'>Coded using Next.js and TailwindCSS, deployed on Vercel</p>
-                <p className='text-slate-600 text-sm'>© 2023 Nick Myers</p>
+                <p className='text-slate-600 text-sm'>Coded with Next.js and TypeScript, deployed on Vercel</p>
+                <p className='text-slate-600 text-sm'>© 2024 Nick Myers</p>
             </div>
         </div>
     </div>

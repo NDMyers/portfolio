@@ -63,11 +63,14 @@ const MobileQuickView: FC<MobileQuickViewProps> = ({}) => {
 
                 <AnimatePresence mode="wait">
                     {showProjects &&
-                    <motion.div className='flex flex-row justify-evenly items-center flex-wrap '
+                    <motion.div className='flex flex-col justify-evenly items-center flex-wrap '
                         initial={{ opacity: 0}}
                         animate={{ opacity: 1}}
                         exit={{ opacity: 0}}
                     >
+
+                        {/* EXPERIENCE TODO */}
+
                         <ProjectDiv 
                             title='TikTok Tournaments' 
                             description='An interactive web app where users can enter TikTok URLs to compete in a popularity tournament bracket, example tournament included! Users are displayed two videos per bracket and choose their favorite each time. The winning video is then algorithmically calculated and shown to the user. Version control used with Git.'
